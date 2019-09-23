@@ -1,0 +1,176 @@
+{% load staticfiles %}
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Strategy &mdash; Free Portfolio Template by Colorlib</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/aos.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/hamburgers/hamburgers.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'fonts/icomoon/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/animsition.min.css' %}">
+    <link rel="stylesheet" href="{% static 'item_image.css' %}">
+    <link href="{% static 'admin_static/vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet" type="text/css">
+</head>   
+   
+
+<body>
+
+<section>
+  
+    <center><b><p class="bg-gradient-primary" style="background-color: #ff5733; color: white;">Recommended for you<p></b></center>
+  <hr>
+  <div style=" border-top-width: 10px !important;">
+    
+     <div  class="row">
+         {% for item in recommended_uploded_items %}
+
+          <a href="{{ item.get_absolute_url }}">
+            <div  class="col-lg-4 col-md-4" >
+            
+              <figure style="width: 130px !important;" >
+                <img src="{{ item.item_image.url  }}" alt="{{ item.item_descrition }}" class="img-fluid">
+               
+                   
+              </figure>
+              
+
+            </div>
+          </a>
+
+         {% endfor %}
+
+
+          
+        </div>
+      
+      
+        <!-- END row -->
+      </div>
+      </center>
+      <hr>
+    </section>
+    <center>
+      <div class="col-xl-3 col-md-6 mb-4">
+              <div class="card border-left-primary shadow h-100 py-2">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Create your own Store</div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800">To quicky sell Items</div>
+                    </div>
+                    <div class="col-auto">
+                      <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+    </center>
+<section>
+  
+    <center><b><p class="bg-gradient-primary" style="background-color: #ff5733; color: white;">Recently Added<p></b></center>
+  <hr>
+  <div style=" border-top-width: 10px !important;">
+    
+     <div  class="row">
+         {% for item in recently_uploded_items %}
+
+          <a href="{{ item.get_absolute_url }}">
+            <div  class="col-lg-4 col-md-4" >
+            
+              <figure style="width: 130px !important;" >
+                <img src="{{ item.item_image.url  }}" alt="{{ item.item_descrition }}" class="img-fluid">
+               
+                   
+              </figure>
+              
+
+            </div>
+          </a>
+
+         {% endfor %}
+
+
+          
+        </div>
+      
+      
+        <!-- END row -->
+      </div>
+      </center>
+      <hr>
+    </section>
+    <center>
+      <div class="col-xl-3 col-md-6 mb-4">
+              <div class="card border-left-primary shadow h-100 py-2">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">For any Help Contact</div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800">07113230</div>
+                    </div>
+                    <div class="col-auto">
+                      <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+    </center>
+
+    <section>
+  
+    <center><b><p class="bg-gradient-primary" style="color: white;">Today's Featured<p></b></center>
+  <hr>
+  <div style=" border-top-width: 10px !important;">
+    
+     <div  class="row">
+         {% for item in  featured_uploded_items %}
+
+          <a href="{{ item.get_absolute_url }}">
+            <div  class="col-lg-4 col-md-4" >
+            
+              <figure style="width: 130px !important;" >
+                <img src="{{ item.item_image.url  }}" alt="{{ item.item_descrition }}" class="img-fluid">
+               
+                   
+              </figure>
+              
+
+            </div>
+          </a>
+
+         {% endfor %}
+
+
+          
+        </div>
+      
+      
+        <!-- END row -->
+      </div>
+      </center>
+      <hr>
+    </section>
+    <center>
+      <div  style="color: white !important;"class="col-xl-3 col-md-6 mb-4">
+              <div class="card border-left-primary shadow h-100 py-2">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">It' Daemon Stars</div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800">$40,000</div>
+                    </div>
+                    <div class="col-auto">
+                      <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+    </center>
+   
+
+  </body>
+
+ 

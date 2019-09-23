@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/fontawesome.min.css">
+
+    <script>
+
+        function openNav(){
+            document.getElementById("sidenav").style.width = "100%";
+        }
+    
+        function closeNav() {
+           
+            document.getElementById("sidenav").style.width = "0";
+       
+        }
+
+    </script>
+</head>
+<body>
+
+    <div class="openbtn" onclick="openNav()">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
+
+    <div class="sidenav" id="sidenav">
+        
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        
+            <a href="#"> <i class="fa fa-home"></i>Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+
+    </div>
+
+    <div class="carousel-item">
+            <img src="images/charity.PNG" class="d-block img-fluid">
+            <div class="carousel-caption">
+                <h2>Charity Mutai</h2>
+                <H4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus minus beatae expedita sint odit quasi est sit. Possimus, sapiente hic?</H4>
+            </div>
+        </div>
+
+
+
+
+
+
+         <!-- <div id="main">
+            <img src="images/charity.PNG" alt="" srcset="">
+            <caption>Hello word!!</caption>
+        </div> -->
+
+
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/fontawesome.min.js"></script>
+</body>
+</html>
