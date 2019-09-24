@@ -69,10 +69,10 @@ def item_detail(request,name):
 
 	uploaded_item = get_object_or_404(Item, item_name=name)
 	same_category_items = Item.objects.all().filter(item_category=uploaded_item.item_category)[:6]
-	same_seller_items = Item.objects.all().filter(item_owner=request.user)
+	#same_seller_items = Item.objects.all().filter(item_owner=request.user)
 	categories = category.objects.all()
 	return render(request, 'admin_template/item_detail.html', {'item': uploaded_item, 'category':
-		categories,'same_category_items': same_category_items, 'same_seller_items': same_seller_items, })
+		categories,'same_category_items': same_category_items })
 
 
 def categories(request, category_name):
