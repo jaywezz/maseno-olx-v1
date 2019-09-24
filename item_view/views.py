@@ -135,6 +135,9 @@ def upload_item(request):
 def profile(request):
 	return render(request, 'admin_template/profile.html')
 
+def side_bar(request):
+	return render(request, 'admin_template/index.html')
+
 
 class ItemUpdate(UpdateView):
 	model = Item

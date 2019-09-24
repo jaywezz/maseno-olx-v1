@@ -10,7 +10,7 @@ urlpatterns = [
     path('upload-product/', views.UploadView.as_view(), name='upload_product'),
     path('<name>/update-product/', views.UpdateView.as_view(), name='update_product'),
     path('item_list/', views.item_list, name='item_list'),
-
+    path('side_bar', views.side_bar, name='side_bar_test'),
     path('item_detail/<name>', views.item_detail, name='item_detail'),
     path('category/<category_name>', views.categories, name='category'),
     path('profile', views.profile, name='profile'),

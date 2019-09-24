@@ -23,21 +23,21 @@
 
 </head>
 
-<body id="page-top">
+<body class="content-left-sidebar" id="page-top">
 
   <!-- Page Wrapper -->
   <div id="wrapper">
 
     <!-- Sidebar -->
 
-    <ul style="" class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion " id="accordionSidebar">
+    <ul style="float: left !important; position: sticky !important;" class="sidebar-sticky navbar-nav bg-gradient-primary sidebar sidebar-dark " id="accordionSidebar">
 
       <!-- Sidebar - Brand -->
-      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{% url 'item_view:welcome_page' %}">
         <div class="sidebar-brand-icon rotate-n-15">
           <i class="fas fa-laugh-wink"></i>
         </div>
-        <div class="sidebar-brand-text mx-3">Daemon <sup>Star</sup></div>
+        <div class="sidebar-brand-text mx-3">Maseno<sup><b>OLX</b></sup></div>
       </a>
 
       <!-- Divider -->
@@ -420,7 +420,7 @@
 
         <!-- Begin Page Content -->
          
-           <div  class="container-fluid">
+           <div  style="" class="container-fluid">
        
           <!-- Page Heading -->
         {% include 'admin_template/item_image.html' %}
