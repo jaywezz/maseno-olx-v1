@@ -28,7 +28,7 @@ def welcome_page(request):
 	featured_uploded_items = Item.objects.all().order_by('-date_created')[17:23]
 	categories = category.objects.all()
 
-	return render(request, "admin_template/blank.html", {'featured_uploded_items': featured_uploded_items, 'recently_uploded_items': recently_uploded_items, 'recommended_uploded_items': recommended_uploded_items, 'category': categories})
+	return render(request, "admin_template/item_image.html", {'featured_uploded_items': featured_uploded_items, 'recently_uploded_items': recently_uploded_items, 'recommended_uploded_items': recommended_uploded_items, 'category': categories})
 
 
 #View for the cateories page
@@ -135,8 +135,8 @@ def upload_item(request):
 def profile(request):
 	return render(request, 'admin_template/profile.html')
 
-def side_bar(request):
-	return render(request, 'admin_template/index.html')
+def header(request):
+	return render(request, 'admin_template/header.html')
 
 
 class ItemUpdate(UpdateView):

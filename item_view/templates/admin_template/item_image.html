@@ -10,14 +10,39 @@
     <link rel="stylesheet" href="{% static 'css/animsition.min.css' %}">
     <link rel="stylesheet" href="{% static 'item_image.css' %}">
     <link href="{% static 'admin_static/vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet" type="text/css">
+
+     <!-- Favicon -->
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="{% static 'slider/style.css' %}">
+
+
 </head>   
    
 
 <body>
+   {% include 'admin_template/header.html' %}
 
-<section>
-  
-    <center><b><p class="bg-gradient-primary" style="background-color: #ff5733; color: white;">Recommended for you<p></b></center>
+     <!-- Instagram Feed Area -->
+    <section class="follow-area clearfix">
+      
+        <div class="b instragram-feed-area owl-carousel">
+            <!-- Single Instagram Item -->
+            {% for item in recently_uploded_items %}
+            <div class="single-instagram-item">
+                <img src="{{ item.item_image.url  }}" alt="">
+                <div class="instagram-hover-content text-center d-flex align-items-center justify-content-center">
+                    <a href="#">
+                        <i class="ti-instagram" aria-hidden="true"></i>
+                        <span>Alime_photographer</span>
+                    </a>
+                </div>
+            </div>
+            {% endfor %}  
+        </div>   
+    </section>
+     
+    <center><b><p>Recommended for you<p></b></center>
   <hr>
   <div style=" border-top-width: 10px !important;">
     
@@ -49,23 +74,7 @@
       </center>
       <hr>
     </section>
-    <center>
-      <div class="col-xl-3 col-md-6 mb-4">
-              <div class="card border-left-primary shadow h-100 py-2">
-                <div class="card-body">
-                  <div class="row no-gutters align-items-center">
-                    <div class="col mr-2">
-                      <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Create your own Store</div>
-                      <div class="h5 mb-0 font-weight-bold text-gray-800">To quicky sell Items</div>
-                    </div>
-                    <div class="col-auto">
-                      <i class="fas fa-calendar fa-2x text-gray-300"></i>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-    </center>
+   
 <section>
   
     <center><b><p class="bg-gradient-primary" style="background-color: #ff5733; color: white;">Recently Added<p></b></center>
@@ -100,23 +109,7 @@
       </center>
       <hr>
     </section>
-    <center>
-      <div class="col-xl-3 col-md-6 mb-4">
-              <div class="card border-left-primary shadow h-100 py-2">
-                <div class="card-body">
-                  <div class="row no-gutters align-items-center">
-                    <div class="col mr-2">
-                      <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">For any Help Contact</div>
-                      <div class="h5 mb-0 font-weight-bold text-gray-800">07113230</div>
-                    </div>
-                    <div class="col-auto">
-                      <i class="fas fa-calendar fa-2x text-gray-300"></i>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-    </center>
+   
 
     <section>
   
@@ -152,25 +145,15 @@
       </center>
       <hr>
     </section>
-    <center>
-      <div  style="color: white !important;"class="col-xl-3 col-md-6 mb-4">
-              <div class="card border-left-primary shadow h-100 py-2">
-                <div class="card-body">
-                  <div class="row no-gutters align-items-center">
-                    <div class="col mr-2">
-                      <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">It' Daemon Stars</div>
-                      <div class="h5 mb-0 font-weight-bold text-gray-800">$40,000</div>
-                    </div>
-                    <div class="col-auto">
-                      <i class="fas fa-calendar fa-2x text-gray-300"></i>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-    </center>
+  
+     
    
 
   </body>
 
  
+  
+   
+   
+
+
